@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+
+.menu {
+    position: fixed;
+    width: 100%;
+    min-width: 20px;
+    height: 15%;
+    background-color: rgba(34, 36, 32, 0.774);
+    border: solid 1px black;
+    margin-top: 0px;
+    z-index: 10;
+}
+
+.menu ul {
+    list-style: none;
+    display: block;
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.menu ul li {
+    float: left;
+}
+
+.menu ul li a {
+    display: block;
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+    transition: all 300ms ease-in-out;
+}
+
+.menu ul li a:hover {
+    color: rgb(226, 226, 226);
+    background-color: rgba(204, 204, 204, 0.185);
+}
+
+.home {
+    display: flex;
+    /*indica a direção do eixo principal (y - column, x - row)*/
+    flex-direction: row;
+    /*alinhamento do conteúdo*/
+    justify-content: space-around;
+    /*define o eixo perpendicular neste caso o eixo y*/
+    align-items: center;
+    /*quebrar a linha*/
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100vh;
+    padding: 15.2vh;
+    background-color: rgba(100, 100, 100, 0.50);
+    z-index: -10;
+    scroll-snap-type: proximity;
+    overflow: auto;
+}
+
+.home .conteudo {
+    display: block;
+    text-align: center;
+    vertical-align: middle;
+    /*width: 200px;*/
+    /*adapta o width dos elementos com base no espaço liberado*/
+    flex-grow: 1;
+    /*reserva um espaço mínimo específico para cada elemento*/
+    flex-basis: 200px;
+    /*não permite que meu elemento diminua*/
+    flex-shrink: 0;
+    /*atalho pode ser flex: grow shrink basis*/
+    height: 200px;
+    background-color: red;
+    margin: 15px;
+    border-radius: 50%;
+    box-shadow: 10px 10px 15px black, inset 0 0 20px rgb(8, 238, 38);
+}
+
+.full-page {
+    position: relative;
+    left: 12.5%;
+    padding: 15.2vh;
+    top: 1px;
+    width: 75%;
+    height: 100vh;
+    background-color: aqua;
+}

@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.caixa{
+    background-color: black;
+    height: 120px;
+    width: 120px;
+}
+
+;
+/*seletores de atributos*/
+
+[meu-atributo="green"]{
+    color: blue;
+}
+
+[meu-atributo2~="valor"]{
+    color: yellow;
+}
+[meu-atributo3*="value"]{
+    color: green;
+}
+
+/*pseudo classes*/
+.heading{
+    transition: all 1s ease-in-out; /*aplica um efeito a todas as transições dentro da classe heading*/
+}
+.heading:hover{
+    background-color: blue;
+}
+
+input:focus {
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    outline: none;
+    border: 1px solid black;
+}
+
+input:disabled{
+    background-color: darkred;
+    cursor: not-allowed
+}
+input:checked + p {
+    color: yellow;
+    background-color: red;
+}
+
+p:not(.meio){
+    background-color: grey;
+}
+
+ul li:nth-child(2n+1){
+    background-color: red;
+}
+
+/*pseudo elemento*/
+ul li::after{
+    content: 'elemento incluidodepois';
+    color: white;
+    display:block;
+}
+
+Ul li::before{
+    content: 'elemento incluido antes';
+    display:block;
+}
